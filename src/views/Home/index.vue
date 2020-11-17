@@ -1,17 +1,29 @@
-<template>
-  <div class="container">
-    <h1>Welcome to Z-Vue</h1>
-    <img class="logo" src='https://note.ss.purevivi.chat/Fnn562fSUBw4HdUH7GOH8sWD0GnH'>
-     <a href='#/page1'>page1</a>
-  </div>
+<template lang="html">
+    <div class="container">
+        <h1>Welcome to Z-Vue{{ obj.name }}</h1>
+        <img class="logo" src="https://note.ss.purevivi.chat/Fnn562fSUBw4HdUH7GOH8sWD0GnH" />
+        <a href="#/page1">page1</a>
+    </div>
 </template>
 
-<script>
+<script lang="ts">
+interface Obj {
+    name: string
+}
+import { PropType } from 'vue'
+
 export default {
-  name: 'Hello Home',
-  props: {
-    msg: String
-  }
+    name: 'HelloHome',
+    props: {
+        msg: {
+            type: String,
+            default: ''
+        },
+        obj: {
+            type: Object as PropType<Obj>,
+            default: {}
+        }
+    }
 }
 </script>
 
@@ -31,8 +43,7 @@ export default {
     border-radius: 50%;
 }
 
-h1{
-  color: $blue;
+h1 {
+    color: $blue;
 }
-
 </style>

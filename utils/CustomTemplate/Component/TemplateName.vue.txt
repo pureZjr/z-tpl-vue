@@ -1,15 +1,12 @@
-<template>
+<template lang="html">
   <div class="container">
-    <h1>{{ msg }}</h1>
+    <h1>{{ComponentName}}</h1>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: 'Hello ${ComponentName}',
-  props: {
-    msg: String
-  }
+  name: 'Hello${ComponentName}',
 }
 </script>
 
