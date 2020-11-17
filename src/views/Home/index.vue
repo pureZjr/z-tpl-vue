@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
     <div class="container">
         <h1>Welcome to Z-Vue{{ obj.name }}</h1>
         <img class="logo" src="https://note.ss.purevivi.chat/Fnn562fSUBw4HdUH7GOH8sWD0GnH" />
